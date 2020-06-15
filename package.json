@@ -1,0 +1,30 @@
+{
+  "name": "bpdts-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon listen.js",
+    "test": "mocha spec/app.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clo2202/bpdts-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clo2202/bpdts-project/issues"
+  },
+  "homepage": "https://github.com/clo2202/bpdts-project#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
