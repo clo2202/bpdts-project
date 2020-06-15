@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
+const { userRouter } = require('./routes/users-router');
 
-app.get("/", (req, res) => res.send('Hello World'));
+app.use("/users", userRouter);
 
 module.exports = { app };
