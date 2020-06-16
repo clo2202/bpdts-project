@@ -1,19 +1,7 @@
 const axios = require("axios");
-const geolib = require("geolib");
+const { milesConversion, checkDistance } = require('../utils/utils');
 
 const baseUrl = "https://bpdts-test-app.herokuapp.com";
-
-const milesConversion = miles => {
-  return miles * 1609;
-};
-
-const checkDistance = (user, meters) => {
-  return geolib.isPointWithinRadius(
-    { latitude: user.latitude, longitude: user.longitude },
-    { latitude: 51.50853, longitude: -0.12574 },
-    meters
-  );
-};
 
 const fetchUsersByCity = async city => {
   const { data } = await axios.get(`${baseUrl}/city/${city}/users`);

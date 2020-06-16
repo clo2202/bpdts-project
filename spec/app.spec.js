@@ -11,9 +11,7 @@ describe("/users/:city", () => {
   beforeEach(() => {
     nock(baseUrl)
       .get("/city/London/users")
-      .reply(200, [...usersByCity]);
-
-    nock(baseUrl)
+      .reply(200, [...usersByCity])
       .get("/users")
       .reply(200, [...allUsers]);
   });
