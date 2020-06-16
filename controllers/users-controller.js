@@ -1,5 +1,10 @@
+const { fetchUsersByCity } = require("../models/users-model");
+
 const getUsersByLocation = (req, res, next) => {
-    res.status(200).send({msg: "fetch users"})
+    const { city } = req.params;
+    fetchUsersByCity(city).then(users => {
+        res.status(200).send({users})
+    })
 }
 
 module.exports = { getUsersByLocation }
