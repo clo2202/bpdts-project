@@ -8,10 +8,10 @@ const fetchUsersByCity = async city => {
   return data;
 };
 
-const fetchUsersWithinRadius = async miles => {
+const fetchUsersWithinRadius = async (miles, latLng) => {
   const meters = milesConversion(miles);
   const { data } = await axios.get(`${baseUrl}/users`);
-  return data.filter(user => checkDistance(user, meters));
+  return data.filter(user => checkDistance(user, meters, latLng));
 };
 
 module.exports = { fetchUsersByCity, fetchUsersWithinRadius };

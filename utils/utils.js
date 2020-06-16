@@ -1,13 +1,18 @@
 const geolib = require("geolib");
+const { cityCentreLookup } = require('./refObject');
 
 exports.milesConversion = miles => {
     return miles * 1609;
   };
+
+exports.lookupCity = city => {
+  return cityCentreLookup[city];
+}  
   
-exports.checkDistance = (user, meters) => {
+exports.checkDistance = (user, meters, lngLat) => {
     return geolib.isPointWithinRadius(
       { latitude: user.latitude, longitude: user.longitude },
-      { latitude: 51.50853, longitude: -0.12574 },
+      lngLat,
       meters
     );
   };
