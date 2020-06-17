@@ -2,7 +2,7 @@
 
 An API which calls an external API to return people who are listed as either living in a given city, or whose current co-ordinates are within X miles of that city.
 
-Currently the API only contains data for those listed as living in London.
+Currently this API only returns data for London. If/when the external API includes more cities, this API can easily be updated to accommodate those.
 
 ## Dependencies
 
@@ -21,7 +21,7 @@ Currently the API only contains data for those listed as living in London.
 The API can be viewed on https://bpdts-test.herokuapp.com/
 
 ## Getting Started
-Follow these instructions to get the app running locally.
+Follow these instructions to run the application locally.
 
 ## Step 1 - Clone the repo
 
@@ -77,7 +77,7 @@ npm run test
 ```bash
 npm run test-utils
 
-# This will run Chai test for the util functions used within the application.
+# This will run tests just for the util functions used within the application.
 ```
 
 ## Deployment
@@ -85,7 +85,7 @@ npm run test-utils
 ```bash
 npm run start
 
-# This will connect you to localhost:3000
+# This will connect you to localhost:9090
 ```
 
 ## Endpoints 
