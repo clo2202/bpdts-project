@@ -51,7 +51,8 @@ To run the tests simply enter the following command;
 ```bash
 npm run test
 
-# Testing has been built using Mocha, Chai & Nock. They are to check the endpoints are retrieving the correct data, in the expected format. For example . . .
+# Testing has been built using Mocha, Chai & Nock. They are to check the endpoints are retrieving 
+# the correct data, in the expected format. For example . . .
 
   describe("/users/:city", () => {
     it("Responds with an array of users listed as living in a given city", () => {

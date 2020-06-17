@@ -1,0 +1,22 @@
+{
+  "GET /": {
+    "description": "serves up a json representation of the available endpoints of the api"
+  },
+  "GET /users/:city": {
+    "description": "serves an array of all users listed as living in a given city, search can be expanded by using 'miles=X' query",
+    "queries": ["miles"],
+    "exampleResponse": {
+      "users": [
+        {
+          "id": 1,
+          "first_name": "Mechelle",
+          "last_name": "Boam",
+          "email": "mboam3q@thetimes.co.uk",
+          "ip_address": "113.71.242.187",
+          "latitude": -6.5115909,
+          "longitude": 105.652983
+        }
+      ]
+    }
+  }
+}
