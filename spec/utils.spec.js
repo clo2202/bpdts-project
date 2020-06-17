@@ -1,5 +1,9 @@
 const { expect } = require("chai");
-const { filterWithinRadius } = require("../utils/utils");
+const {
+  filterWithinRadius,
+  milesConversion,
+  lookupCity
+} = require("../utils/utils");
 const { allUsers } = require("../test-data");
 
 describe("filterWithinRadius", () => {
@@ -83,5 +87,28 @@ describe("filterWithinRadius", () => {
         longitude: 0.3860497
       }
     ]);
+  });
+});
+
+describe("milesConversion", () => {
+  it("return 0 if no miles are given", () => {
+    expect(milesConversion(0)).to.equal(0);
+  });
+  it("returns the correct number of meters", () => {
+    expect(milesConversion(10)).to.equal(16093.4);
+  });
+});
+
+describe("lookupCity", () => {
+  it("returns undefined if city is not present in refObject", () => {
+    expect(lookupCity("Leeds")).to.be.undefined;
+  });
+  it("returns object containing lat and log properties for given city that is present in refObject", () => {
+    const actual = lookupCity("London");
+    const expected = {
+      latitude: 51.50853,
+      longitude: -0.12574
+    };
+    expect(actual).to.eql(expected);
   });
 });

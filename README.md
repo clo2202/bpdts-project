@@ -18,7 +18,7 @@ Currently the API only contains data for those listed as living in London.
 - Nock
 - Supertest
 
-The API can be viewed on XXXXXXXX
+The API can be viewed on https://bpdts-test.herokuapp.com/
 
 ## Getting Started
 Follow these instructions to get the app running locally.
