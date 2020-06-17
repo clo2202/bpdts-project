@@ -84,12 +84,16 @@ npm run start
 
 ## Endpoints 
 
-```GET /```
+```postman 
+GET /
+```
 
 **Responds with**
 * JSON describing the available endpoints.
 
-```GET /users/:city```
+```postman
+GET /users/:city
+```
 
 **Responds with**
 * an array of user objects who are listed as living in a given city, each of which contain the following properties;
@@ -101,7 +105,10 @@ npm run start
     * ```latitude```
     * ```longitude```
 
-```GET /users/:city?miles=x```
+
+```postman
+GET /users/:city?miles=x
+```
 
 **Responds with**
 * an array of user objects who are either listed as living in a given city, or who are located within X miles of the city. Each object contains the same properties as above.  
