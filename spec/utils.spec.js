@@ -37,6 +37,7 @@ describe("filterWithinRadius", () => {
     expect(actual.length).to.equal(2);
   });
   it("does not mutate the input array", () => {
+    const miles = 50;
     const testUsers = [
       {
         id: 5,
@@ -57,7 +58,11 @@ describe("filterWithinRadius", () => {
         longitude: 0.3860497
       }
     ];
-    filterWithinRadius(testUsers);
+    const latLng = {
+      latitude: 51.50853,
+      longitude: -0.12574
+    };
+    filterWithinRadius(testUsers, miles, latLng);
     expect(testUsers).to.eql([
       {
         id: 5,

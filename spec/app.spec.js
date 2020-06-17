@@ -42,8 +42,8 @@ describe("GET users ", () => {
         });
     });
   });
-  describe("/users/:city?miles=:miles", () => {
-    it("Responds with an array of users who are listed as living in given city & whose coordinates are within 50 miles of the city", () => {
+  describe("/users/:city?miles=X", () => {
+    it("Responds with an array of users who are listed as living in given city & whose coordinates are within X miles of the city", () => {
       nock(baseUrl)
         .get("/city/London/users")
         .reply(200, [...usersByCity])

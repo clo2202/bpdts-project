@@ -1,6 +1,6 @@
 # bpdts-project
 
-An API which calls an external API to return people who are listed as either living in a given city, or whose current co-ordinates are within 50 miles of that city.
+An API which calls an external API to return people who are listed as either living in a given city, or whose current co-ordinates are within X miles of that city.
 
 Currently the API only contains data for those listed as living in London.
 
@@ -21,10 +21,9 @@ Currently the API only contains data for those listed as living in London.
 The API can be viewed on XXXXXXXX
 
 ## Getting Started
+Follow these instructions to get the app running locally.
 
-These instructions will get you a copy of the project up and running on your local machine.
-
-## Step 1 - Running Locally
+## Step 1 - Clone the repo
 
 Clone this repo;
 
@@ -34,7 +33,7 @@ git clone https://github.com/clo2202/bpdts-project
 
 ## Step 2 - Getting started with your project
 
-Once you're in the repo, ensure you have downloaded all of the dependencies using the following command;
+Navigate to the root of the repo and ensure you have downloaded all of the dependencies using the following command;
 
 ```bash
 npm install
@@ -73,6 +72,12 @@ npm run test
     });
 )};
 
+```
+
+```bash
+npm run test-utils
+
+# This will run Chai test for the util functions used within the application.
 ```
 
 ## Deployment
