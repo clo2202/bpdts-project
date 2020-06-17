@@ -9,7 +9,7 @@ const baseUrl = "https://bpdts-test-app.herokuapp.com";
 
 describe("GET users ", () => {
   describe("/users/:city", () => {
-    it("Responds with an array of users listed as living in given city", () => {
+    it("Responds with an array of users listed as living in a given city", () => {
       nock(baseUrl)
         .get("/city/London/users")
         .reply(200, [...usersByCity])
@@ -55,6 +55,7 @@ describe("GET users ", () => {
         .expect(200)
         .then(({ body: { users } }) => {
           expect(users.length).to.equal(6);
+          expect(users[0].first_name).to.equal("Mechelle");
         });
     });
   });

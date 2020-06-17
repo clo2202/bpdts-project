@@ -1,12 +1,12 @@
 const geolib = require("geolib");
-const { cityCentreLookup } = require('./refObject');
+const { cityLatLongLookup } = require('./refObject');
 
 exports.milesConversion = miles => {
     return miles * 1609;
   };
 
 exports.lookupCity = city => {
-  return cityCentreLookup[city];
+  return cityLatLongLookup[city];
 }  
   
 exports.checkDistance = (user, meters, lngLat) => {
