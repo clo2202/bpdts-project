@@ -21,7 +21,7 @@
   "homepage": "https://github.com/clo2202/bpdts-project#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "nock": "^12.0.3",
     "supertest": "^4.0.2"
   },
